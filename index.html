@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera Pop Cinema - Filtros Avanzados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Cartelera Pop Cinema</h1>
+        <p>Catálogo dinámico con sistema de filtrado automatizado</p>
+    </header>
+
+    <section class="filter-bar">
+        <div class="filter-group">
+            <label for="search-input">Buscar Película</label>
+            <input type="text" id="search-input" placeholder="Ej: Superman, Shrek...">
+        </div>
+
+        <div class="filter-group">
+            <label for="genre-select">Género / Tipo</label>
+            <select id="genre-select">
+                <option value="all">Todos los géneros</option>
+                </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="location-select">Ubicación / Cine</label>
+            <select id="location-select">
+                <option value="all">Todas las ubicaciones</option>
+                </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="status-select">Estado</label>
+            <select id="status-select">
+                <option value="all">Todos los estados</option>
+                <option value="available">Disponibles</option>
+                <option value="unavailable">No Disponibles</option>
+            </select>
+        </div>
+    </section>
+
+    <div id="loading-state" class="loading-container">
+        <div class="spinner"></div>
+        <p>Cargando películas y configurando filtros...</p>
+    </div>
+
+    <main class="grid-container id-hidden" id="movies-grid">
+        </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
